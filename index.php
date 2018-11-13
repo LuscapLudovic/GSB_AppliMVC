@@ -15,6 +15,7 @@
  */
 
 //courage Umay on va y arriver
+//Umay force à toi (De la part de kiki qui n'y croit pas dutout xD)
 
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
