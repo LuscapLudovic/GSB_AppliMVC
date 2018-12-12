@@ -24,6 +24,10 @@ function estConnecte()
     return isset($_SESSION['idVisiteur']);
 }
 
+function privilege(){
+    return isset($_SESSION['type']);
+}
+
 /**
  * Enregistre dans une variable session les infos d'un visiteur
  *
