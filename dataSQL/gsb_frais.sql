@@ -298,6 +298,21 @@ ALTER TABLE `lignefraishorsforfait`
   ADD CONSTRAINT `lignefraishorsforfait_ibfk_1` FOREIGN KEY (`idvisiteur`,`mois`) REFERENCES `fichefrais` (`idvisiteur`, `mois`);
 COMMIT;
 
+--
+-- Ajout de la colonne 'groupe_id' dans la table 'visiteurs'
+--
+ALTER TABLE visiteur
+ADD groupe_id int;
+
+--
+-- Jointure entre id de la table 'groupes' et groupe_id de la table 'visiteurs'
+-- 
+SELECT *
+FROM visiteur
+INNER JOIN groupes ON visiteur.groupe_id = groupes.id;
+
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
