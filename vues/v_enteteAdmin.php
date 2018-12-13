@@ -20,7 +20,13 @@
     </head>
     <body>
         <div class="container">
+            <?php
+            ?>
+            <div class="header">
+                <div class="row vertical-align">
 
+                </div>
+            </div>
         </div>
     </body>
 </html>
