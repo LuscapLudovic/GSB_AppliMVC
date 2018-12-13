@@ -7,4 +7,4 @@
  */
 ?>
 
-
+// on fera la page de validation de frais ici conformément à l'image qu'il y a dans le dossier sujet.
