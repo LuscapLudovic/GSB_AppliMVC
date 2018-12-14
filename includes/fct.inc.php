@@ -34,14 +34,16 @@ function privilege(){
  * @param String $idVisiteur ID du visiteur
  * @param String $nom        Nom du visiteur
  * @param String $prenom     Prénom du visiteur
+ * @param String $groupe     Groupe de l'utilisateur
  *
  * @return null
  */
-function connecter($idVisiteur, $nom, $prenom)
+function connecter($idVisiteur, $nom, $prenom, $groupe)
 {
     $_SESSION['idVisiteur'] = $idVisiteur;
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
+    $_SESSION['groupe'] = $groupe;
 }
 
 /**
