@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64469693-4664-4287-bbde-5a2496b4b19d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/vues/v_enteteGestion.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/includes/fct.inc.php" afterPath="$PROJECT_DIR$/includes/fct.inc.php" />
-      <change beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change beforePath="$PROJECT_DIR$/vues/v_enteteAdmin.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/controleurs/c_connexion.php" afterPath="$PROJECT_DIR$/controleurs/c_connexion.php" />
+      <change beforePath="$PROJECT_DIR$/includes/class.pdogsb.inc.php" afterPath="$PROJECT_DIR$/includes/class.pdogsb.inc.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+            <state relative-caret-position="340">
+              <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -47,22 +45,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gsb_frais.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataSQL/gsb_frais.sql">
+      <file leaf-file-name="fct.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/fct.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2992">
-              <caret line="176" column="2" lean-forward="false" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
+            <state relative-caret-position="256">
+              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/index.php">
+      <file leaf-file-name="class.pdogsb.inc.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="550">
+              <caret line="488" column="5" lean-forward="false" selection-start-line="488" selection-start-column="5" selection-end-line="488" selection-end-column="5" />
+              <folding>
+                <marker date="1544801147532" expanded="true" signature="3774:3939" ph="SELECT * FRO... lignefraishorsforfait" />
+                <marker date="1544801147532" expanded="true" signature="4791:4954" ph="SELECT fiche... fichefrais" />
+                <marker date="1544801147532" expanded="true" signature="9706:9852" ph="SELECT fiche... fichefrais" />
+                <marker date="1544801147532" expanded="true" signature="11757:11924" ph="INSERT INTO fichefrais... " />
+                <marker date="1544801147532" expanded="true" signature="12290:12447" ph="INSERT INTO lignefraisforfait... " />
+                <marker date="1544801147532" expanded="true" signature="13555:13694" ph="INSERT INTO lignefraishorsforfait... " />
+                <marker date="1544801147532" expanded="true" signature="14419:14513" ph="DELETE FROM lignefraishorsforfait... " />
+                <marker date="1544801147532" expanded="true" signature="15043:15197" ph="SELECT fiche... fichefrais" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,7 +94,22 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="c_connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleurs/c_connexion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getIn</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -100,9 +122,11 @@
         <option value="$PROJECT_DIR$/dataSQL/gsb_frais.sql" />
         <option value="$PROJECT_DIR$/vues/v_enteteAdmin.php" />
         <option value="$PROJECT_DIR$/vues/v_entete.php" />
-        <option value="$PROJECT_DIR$/includes/fct.inc.php" />
         <option value="$PROJECT_DIR$/vues/v_enteteGestion.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/fct.inc.php" />
+        <option value="$PROJECT_DIR$/controleurs/c_connexion.php" />
+        <option value="$PROJECT_DIR$/includes/class.pdogsb.inc.php" />
       </list>
     </option>
   </component>
@@ -154,6 +178,11 @@
             <path>
               <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="vues" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
@@ -196,12 +225,12 @@
       <workItem from="1541178693640" duration="30000" />
       <workItem from="1544621628918" duration="5377000" />
       <workItem from="1544707967953" duration="6171000" />
-      <workItem from="1544794490562" duration="3158000" />
+      <workItem from="1544794490562" duration="6649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15506000" />
+    <option name="totallyTimeSpent" value="18997000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -508,37 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="92" column="50" lean-forward="true" selection-start-line="92" selection-start-column="50" selection-end-line="92" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleurs/c_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataSQL/gsb_frais.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="176" column="2" lean-forward="false" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vues/v_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vues/v_listeFraisForfait.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -555,14 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vues/v_validationFrais.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="101" lean-forward="false" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controleurs/c_gererFrais.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -571,26 +561,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/fct.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="102">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vues/v_entete.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+        <state relative-caret-position="340">
+          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -603,11 +585,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/dataSQL/gsb_frais.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="24" column="2" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+        <state relative-caret-position="17">
+          <caret line="176" column="2" lean-forward="false" selection-start-line="176" selection-start-column="2" selection-end-line="176" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/v_entete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="73" column="18" lean-forward="true" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/fct.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/v_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="25" column="30" lean-forward="true" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/v_validationFrais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="9" column="101" lean-forward="false" selection-start-line="9" selection-start-column="101" selection-end-line="9" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleurs/c_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="488" column="5" lean-forward="false" selection-start-line="488" selection-start-column="5" selection-end-line="488" selection-end-column="5" />
+          <folding>
+            <marker date="1544801147532" expanded="true" signature="3774:3939" ph="SELECT * FRO... lignefraishorsforfait" />
+            <marker date="1544801147532" expanded="true" signature="4791:4954" ph="SELECT fiche... fichefrais" />
+            <marker date="1544801147532" expanded="true" signature="9706:9852" ph="SELECT fiche... fichefrais" />
+            <marker date="1544801147532" expanded="true" signature="11757:11924" ph="INSERT INTO fichefrais... " />
+            <marker date="1544801147532" expanded="true" signature="12290:12447" ph="INSERT INTO lignefraisforfait... " />
+            <marker date="1544801147532" expanded="true" signature="13555:13694" ph="INSERT INTO lignefraishorsforfait... " />
+            <marker date="1544801147532" expanded="true" signature="14419:14513" ph="DELETE FROM lignefraishorsforfait... " />
+            <marker date="1544801147532" expanded="true" signature="15043:15197" ph="SELECT fiche... fichefrais" />
+          </folding>
         </state>
       </provider>
     </entry>
