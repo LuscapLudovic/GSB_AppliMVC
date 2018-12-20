@@ -311,12 +311,6 @@ ALTER TABLE `visiteur`
 COMMIT;
 
 --
--- Ajout de la colonne 'groupe_id' dans la table 'visiteurs'
---
-ALTER TABLE visiteur
-ADD groupe_id int;
-
---
 -- Jointure entre id de la table 'groupes' et groupe_id de la table 'visiteurs'
 -- 
 SELECT *
