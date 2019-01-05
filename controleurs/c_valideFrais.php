@@ -19,6 +19,7 @@ case 'choixVisiteur':
 case 'validationFrais':
     break;
 case 'validationHorsForfait':
+    $lesFraisHorsForfait = $pdo->getFraisHorsForfaitVisiteur($idVis, $leMois);
     break;
 case 'initFrais':
     break;

@@ -136,6 +136,32 @@ class PdoGsb
     }
 
     /**
+     * Retourne sous forme d'un tableau associatif toutes les lignes de frais
+     * hors forfait du visiteur selectionnée par le gestionnaire au mois selectionné.
+     *
+     * @param $idVis ID du visiteur selectionné
+     * @param $mois Mois sous la forme aaaamm selectionné
+     * @return mixed retourne les champs des lignes de frais hors forfait sous la forme
+     * d'un tableau associatif
+     */
+    public function getFraisHorsForfaitVisiteur($idVis, $mois){
+        $requetePrepare = PdoGsb::$monPdo->prepare(
+            'SELECT * FROM lignefraishorsforfait '
+            . 'WHERE lignefraishorsforfait.idVis = :unIdvis'
+            . 'AND lignefraishorsforfait.mois = :unMois'
+        );
+        $requetePrepare->bindParam(':unIdVis', $idVis, PDO::PARAM_STR);
+        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
+        $requetePrepare->execute();
+        $lesLignes = $requetePrepare->fetchAll();
+        for($i = 0;$i < count($lesLignes);$i++){
+            $date = $lesLignes[$i]['date'];
+            $lesLignes[$i]['date'] = dateAnglaisVersFrancais($date);
+        }
+        return $lesLignes;
+    }
+
+    /**
      * Retourne le nombre de justificatif d'un visiteur pour un mois donné
      *
      * @param String $idVisiteur ID du visiteur
