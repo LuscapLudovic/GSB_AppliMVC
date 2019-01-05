@@ -22,8 +22,11 @@ require_once 'includes/class.pdogsb.inc.php';
 session_start();
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
-require 'vues/v_entete.php';
-//require 'vues/v_enteteGestion.php';
+if($_SESSION['groupe'] != '1'){
+    require 'vues/v_entete.php';
+}else{
+    require 'vues/v_enteteGestion.php';
+}
 $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);
 if ($uc && !$estConnecte) {
     $uc = 'connexion';
