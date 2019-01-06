@@ -20,6 +20,8 @@ case 'validationFrais':
     break;
 case 'validationHorsForfait':
     $lesFraisHorsForfait = $pdo->getFraisHorsForfaitVisiteur($idVis, $leMois);
+    $lesInfosFicheFrais = $pdo->getLesInfosFicheFrais($idVisiteur, $leMois);
+    $nbJustificatifs = $lesInfosFicheFrais['nbJustificatifs'];
     break;
 case 'initFrais':
     break;
