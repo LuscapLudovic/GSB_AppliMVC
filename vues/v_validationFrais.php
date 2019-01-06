@@ -8,7 +8,52 @@
 
 require 'vues/v_enteteGestion.php';
 ?>
-<!-- Met ton code à partir d'ici !!-->
+ <div class="row">    
+    <h2>Valider ma fiche de Frais</h2>
+    <h3>Eléments forfaitisés</h3>
+    <div class="col-md-4">
+        <form method="post" 
+              action="index.php?uc=gererFrais&action=validerMajFraisForfait" 
+              role="form">
+            <fieldset>       
+                                    <div class="form-group">
+                        <label for="idFrais">Forfait Etape</label>
+                        <input type="text" id="idFrais" 
+                               name="lesFrais[ETP]"
+                               size="10" maxlength="5" 
+                               value="0" 
+                               class="form-control">
+                    </div>
+                                        <div class="form-group">
+                        <label for="idFrais">Frais Kilométrique</label>
+                        <input type="text" id="idFrais" 
+                               name="lesFrais[KM]"
+                               size="10" maxlength="5" 
+                               value="0" 
+                               class="form-control">
+                    </div>
+                                        <div class="form-group">
+                        <label for="idFrais">Nuitée Hôtel</label>
+                        <input type="text" id="idFrais" 
+                               name="lesFrais[NUI]"
+                               size="10" maxlength="5" 
+                               value="0" 
+                               class="form-control">
+                    </div>
+                                        <div class="form-group">
+                        <label for="idFrais">Repas Restaurant</label>
+                        <input type="text" id="idFrais" 
+                               name="lesFrais[REP]"
+                               size="10" maxlength="5" 
+                               value="0" 
+                               class="form-control">
+                    </div>
+                                    <button class="btn btn-success" type="submit">Corriger</button>
+                <button class="btn btn-danger" type="reset">Réinitialiser</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
 <div class="panel panel-info">
     <div class="panel-heading">
         Descriptif des élémentes hors forfait
