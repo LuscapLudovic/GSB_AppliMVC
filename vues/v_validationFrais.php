@@ -8,7 +8,7 @@
 
 require 'vues/v_enteteGestion.php';
 ?>
-<!-- Met ton code à partir d'ici-->
+<!-- Met ton code à partir d'ici !!-->
 <div class="panel panel-info">
     <div class="panel-heading">
         Descriptif des élémentes hors forfait
