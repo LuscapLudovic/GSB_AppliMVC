@@ -8,8 +8,6 @@
 
 require 'vues/v_enteteGestion.php';
 ?>
-<!-- Met ton code à partir d'ici-->
-
  <div class="row">    
     <h2>Valider ma fiche de Frais</h2>
     <h3>Eléments forfaitisés</h3>
@@ -56,9 +54,6 @@ require 'vues/v_enteteGestion.php';
         </form>
     </div>
 </div>
-
-
-
 <div class="panel panel-info">
     <div class="panel-heading">
         Descriptif des élémentes hors forfait
