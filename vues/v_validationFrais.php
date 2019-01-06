@@ -8,6 +8,7 @@
 
 require 'vues/v_enteteGestion.php';
 ?>
+<!-- Met ton code à partir d'ici-->
 <div class="panel panel-info">
     <div class="panel-heading">
         Descriptif des élémentes hors forfait
@@ -28,7 +29,10 @@ require 'vues/v_enteteGestion.php';
                 <td><?php echo $date?></td>
                 <td><?php echo $libelle?></td>
                 <td><?php echo $montant?></td>
-                <!-- Il manque les boutons "Corriger" et "Réinitialiser" à faire-->
+                <td>
+                    <button class="btn btn-success" type="submit">Corriger</button>
+                    <button class="btn btn-danger" type="reset">Réinitialiser</button>
+                </td>
             </tr>
         <?php
         }
