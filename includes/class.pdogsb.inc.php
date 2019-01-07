@@ -119,6 +119,7 @@ class PdoGsb
 		'SELECT nom, prenom'
 		. 'FROM visiteur'
 		);
+		$requetePrepare->execute();
         $lesLignes = $requetePrepare->fetchAll();
         for ($i = 0; $i < count($lesLignes); $i++) {
             $nom = $lesLignes[$i]['nom'];
