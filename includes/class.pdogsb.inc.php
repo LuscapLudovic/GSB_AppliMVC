@@ -40,8 +40,8 @@ class PdoGsb
 {
     private static $serveur = 'mysql:host=localhost';
     private static $bdd = 'dbname=gsb_frais';
-    private static $user = 'userGsb';
-    private static $mdp = 'secret';
+    private static $user = 'root';
+    private static $mdp = '';
     private static $monPdo;
     private static $monPdoGsb = null;
 
@@ -104,6 +104,28 @@ class PdoGsb
         $requetePrepare->execute();
         return $requetePrepare->fetch();
     }
+	
+	/**
+     * Retourne le nom et prénom d'un visiteur
+     *
+     * @param String $login Login du visiteur
+     * @param String $mdp   Mot de passe du visiteur
+     *
+     * @return le nom et le prénom sous la forme d'un tableau associatif
+     */
+	public function getNomVisiteur()
+	{
+		$requetePrepare = PdoGsb::$monPdo->prepare(
+		'SELECT nom, prenom'
+		. 'FROM visiteur'
+		);
+        $lesLignes = $requetePrepare->fetchAll();
+        for ($i = 0; $i < count($lesLignes); $i++) {
+            $nom = $lesLignes[$i]['nom'];
+            $prenom = $lesLignes[$i]['prenom'];
+        }
+        return $lesLignes;
+	}
 
     /**
      * Retourne sous forme d'un tableau associatif toutes les lignes de frais

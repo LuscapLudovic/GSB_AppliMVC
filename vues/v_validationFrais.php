@@ -5,9 +5,21 @@
  * Date: 12/12/2018
  * Time: 14:57
  */
-
-require 'vues/v_enteteGestion.php';
 ?>
+<div class="Choixvisiteur">
+	<p>Choisir le visiteur:
+		<form>
+			<SELECT name="visiteur" id="visiteur">
+				<?php
+				getNomVisiteur();
+				for ($i = 0; $i < count($lesLignes); $i++) {
+				echo '<option value="nom"'.$nom[$leslignes].' '.$prenom[$leslignes].'</option>';
+				}
+				?>
+			</SELECT>
+		</form>
+	</p>
+</div>
  <div class="row">    
     <h2>Valider ma fiche de Frais</h2>
     <h3>Eléments forfaitisés</h3>

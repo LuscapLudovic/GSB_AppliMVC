@@ -13,6 +13,7 @@ $numMois = substr($mois, 4, 2);
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
 $groupe = $_SESSION['groupe'];
 //Il faudra mettre les actions du fichier v_validationFrais.php pour que l'on appelle dedans uniquement des actions dans l'html
+include ('vues/v_validationFrais.php');
 switch ($action){
 case 'choixVisiteur':
     break;
@@ -28,3 +29,4 @@ case 'initFrais':
 case 'initHorsForfait':
     break;
 }
+?>
