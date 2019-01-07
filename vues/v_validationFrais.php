@@ -11,7 +11,6 @@
 		<form>
 			<SELECT name="visiteur" id="visiteur">
 				<?php
-				getNomVisiteur();
 				for ($i = 0; $i < count($lesLignes); $i++) {
 				echo '<option value="nom"'.$nom[$leslignes].' '.$prenom[$leslignes].'</option>';
 				}
