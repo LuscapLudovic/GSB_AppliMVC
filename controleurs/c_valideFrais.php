@@ -16,6 +16,7 @@ $groupe = $_SESSION['groupe'];
 include ('vues/v_validationFrais.php');
 switch ($action){
 case 'choixVisiteur':
+    $lesVisiteurs = $pdo->getNomVisiteur();
     break;
 case 'validationFrais':
     break;
