@@ -6,20 +6,25 @@
  * Time: 14:57
  */
 ?>
-<div class="Choixvisiteur">
-	<p>Choisir le visiteur:
-		<form>
-			<SELECT name="visiteur" id="visiteur">
-				<?php
-				for ($i = 0; $i < count($lesLignes); $i++) {
-				echo '<option value="nom"'.$nom[$leslignes].' '.$prenom[$leslignes].'</option>';
-				}
-				?>
-			</SELECT>
-		</form>
-	</p>
-</div>
- <div class="row">    
+    <div class="row">
+        <form action="index.php?uc=valideFrais&action=validationFrais"
+              method="post" role="form" name="choixVisiteur">
+            <div class="form-group">
+                <select id="listNom" name="listNom" class="form-control">
+                    <?php
+                    foreach($lesVisiteurs as $unVisiteur){
+                        $nom = $unVisiteur['nom'];
+                        $prenom = $unVisiteur['prenom'];
+                        ?>
+                        <option selected value="<?php echo $nom,$prenom ?>">
+                            <?php echo $nom.' '.$prenom?>
+                        </option>
+                        <?php
+                    }
+                    ?>
+                </select>
+            </div>
+        </form>
     <h2>Valider ma fiche de Frais</h2>
     <h3>Eléments forfaitisés</h3>
     <div class="col-md-4">

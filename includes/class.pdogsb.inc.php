@@ -117,14 +117,20 @@ class PdoGsb
 	{
 		$requetePrepare = PdoGsb::$monPdo->prepare(
 		'SELECT nom, prenom'
-		. 'FROM visiteur'
+		. 'FROM visiteur WHERE groupe_id = 2'
+        . 'ORDER BY nom desc'
 		);
-        $lesLignes = $requetePrepare->fetchAll();
-        for ($i = 0; $i < count($lesLignes); $i++) {
-            $nom = $lesLignes[$i]['nom'];
-            $prenom = $lesLignes[$i]['prenom'];
+		$lesNoms = array();
+		$liste = $requetePrepare->execute();
+        while($listeNom = $liste->fetch()){
+            $nom = $listeNom['nom'];
+            $prenom = $listeNom['prenom'];
+            $lesNoms[] = array(
+                'nom' => $nom,
+                'prenom' => $prenom
+            );
         }
-        return $lesLignes;
+        return $lesNoms;
 	}
 
     /**
@@ -166,7 +172,7 @@ class PdoGsb
      * @return mixed retourne les champs des lignes de frais hors forfait sous la forme
      * d'un tableau associatif
      */
-    public function getFraisHorsForfaitVisiteur($idVis, $mois){
+    /*public function getFraisHorsForfaitVisiteur($idVis, $mois){
         $requetePrepare = PdoGsb::$monPdo->prepare(
             'SELECT * FROM lignefraishorsforfait '
             . 'WHERE lignefraishorsforfait.idVis = :unIdvis'
@@ -181,7 +187,7 @@ class PdoGsb
             $lesLignes[$i]['date'] = dateAnglaisVersFrancais($date);
         }
         return $lesLignes;
-    }
+    }*/
 
     /**
      * Retourne le nombre de justificatif d'un visiteur pour un mois donné
