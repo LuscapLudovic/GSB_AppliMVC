@@ -120,6 +120,7 @@ class PdoGsb
 		. 'FROM visiteur WHERE groupe_id = 2'
         . 'ORDER BY nom desc'
 		);
+//<<<<<<< HEAD
 		$lesNoms = array();
 		$liste = $requetePrepare->execute();
         while($listeNom = $liste->fetch()){
@@ -129,6 +130,13 @@ class PdoGsb
                 'nom' => $nom,
                 'prenom' => $prenom
             );
+//=======
+		$requetePrepare->execute();
+        $lesLignes = $requetePrepare->fetchAll();
+        for ($i = 0; $i < count($lesLignes); $i++) {
+            $nom = $lesLignes[$i]['nom'];
+            $prenom = $lesLignes[$i]['prenom'];
+//>>>>>>> master
         }
         return $lesNoms;
 	}
