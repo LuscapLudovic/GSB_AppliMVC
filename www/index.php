@@ -8,17 +8,21 @@
  * @package   GSB
  * @author    Réseau CERTA <contact@reseaucerta.org>
  * @author    José GIL <jgil@ac-nice.fr>
- * @copyright 2017 Réseau CERTA
+ * @author    Alexy ROUSSEAU <contact@alexy-rousseau.com>
+ * @copyright 2017-2019 Réseau CERTA
  * @license   Réseau CERTA
- * @version   GIT: <0>
+ * @version   GIT: <13>
  * @link      http://www.reseaucerta.org Contexte « Laboratoire GSB »
  */
+
+ob_start(); // Utile si on veut nettoyer le contenu de l'output, notamment pour la génération de PDF
 
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
 session_start();
 $pdo = PdoGsb::getPdoGsb();
 $estConnecte = estConnecte();
+$estComptable = (isset($_SESSION['rang']) && $_SESSION['rang'] == 'comptable') ? true : false;
 require 'vues/v_entete.php';
 $uc = filter_input(INPUT_GET, 'uc', FILTER_SANITIZE_STRING);
 if ($uc && !$estConnecte) {
@@ -39,6 +43,19 @@ case 'gererFrais':
 case 'etatFrais':
     include 'controleurs/c_etatFrais.php';
     break;
+
+case 'validerFrais':
+    if($estComptable) {
+        include 'controleurs/c_validerFrais.php';
+    }
+    break;
+
+case 'suivreFrais':
+    if($estComptable) {
+        include 'controleurs/c_suivreFrais.php';
+    }
+    break;
+
 case 'deconnexion':
     include 'controleurs/c_deconnexion.php';
     break;

@@ -8,36 +8,44 @@
  * @package   GSB
  * @author    Cheri Bibi - Réseau CERTA <contact@reseaucerta.org>
  * @author    José GIL <jgil@ac-nice.fr>
- * @copyright 2017 Réseau CERTA
+ * @author    Alexy ROUSSEAU <contact@alexy-rousseau.com>
+ * @copyright 2017-2019 Réseau CERTA
  * @license   Réseau CERTA
- * @version   GIT: <0>
+ * @version   GIT: <13>
  * @link      http://www.php.net/manual/fr/book.pdo.php PHP Data Objects sur php.net
  */
 
 /**
- * Teste si un quelconque visiteur est connecté
+ * Définition de variables & constantes
+ */
+const LABEL_REFUSE = 'REFUSE : ';
+
+/**
+ * Teste si un quelconque membre est connecté
  *
  * @return vrai ou faux
  */
 function estConnecte()
 {
-    return isset($_SESSION['idVisiteur']);
+    return isset($_SESSION['idMembre']);
 }
 
 /**
- * Enregistre dans une variable session les infos d'un visiteur
+ * Enregistre dans une variable session les infos d'un membre
  *
- * @param String $idVisiteur ID du visiteur
- * @param String $nom        Nom du visiteur
- * @param String $prenom     Prénom du visiteur
+ * @param String $idMembre ID du membre
+ * @param String $nom      Nom du membre
+ * @param String $prenom   Prénom du membre
+ * @param String $rang     Le rang du membre (visiteur ou comptable)
  *
  * @return null
  */
-function connecter($idVisiteur, $nom, $prenom)
+function connecter($idMembre, $nom, $prenom, $rang)
 {
-    $_SESSION['idVisiteur'] = $idVisiteur;
+    $_SESSION['idMembre'] = $idMembre;
     $_SESSION['nom'] = $nom;
     $_SESSION['prenom'] = $prenom;
+    $_SESSION['rang'] = $rang;
 }
 
 /**
@@ -94,6 +102,21 @@ function getMois($date)
         $mois = '0' . $mois;
     }
     return $annee . $mois;
+}
+
+/**
+ * Retourne le mois en cours en français depuis une chaine aaaamm
+ *
+ * @param String $date au format  aaaamm
+ *
+ * @return String Date au format mm/aaaa
+ */
+function getMoisFrancais($date)
+{
+    $mois = substr($date, -2);
+    $annee = substr($date, 0, 4);
+
+    return $mois . '/' . $annee;
 }
 
 /* gestion des erreurs */
@@ -246,4 +269,29 @@ function nbErreurs()
     } else {
         return count($_REQUEST['erreurs']);
     }
+}
+
+/**
+ * "Nettoie" un libellé de Frais HF en retirant "REFUSE :"
+ *
+ * @param String $libelle Libellé à nettoyer
+ * @param Int $length la taille maximale de la chaîne à "nettoyer" (100 caractères par défaut)
+ *
+ * @return String le libellé
+ */
+function nettoieLibelle($libelle, $length = 100)
+{
+    // Tant qu'on trouve "REFUSE : " dans notre libellé on supprime l'occurence
+    while(strpos($libelle, LABEL_REFUSE) !== false)
+    {
+        $libelle = str_replace(LABEL_REFUSE, '', $libelle);
+    }
+
+    /**
+    * On tronque la chaîne si elle dépasse les $length caractères (comme demandé en sur la fiche descriptive)
+    * $length -5 pour prendre en compte "(...)" qui fait 5 caractères
+    */
+    $libelle = (strlen($libelle) < $length) ? $libelle : substr($libelle, 0, $length - 5). '(...)';
+
+    return $libelle;
 }
