@@ -12,7 +12,6 @@ class PdoGsb
 
     /**
      * Constructeur privé, crée l'instance de PDO qui sera sollicitée
-     * pour toutes les méthodes de la classe
      */
     private function __construct()
     {
@@ -25,7 +24,7 @@ class PdoGsb
             PdoGsb::$monPdo->query('SET CHARACTER SET utf8');
 
             /**
-             * Appel de cette méthode uniquement une fois pour chiffrer les mdp en clair
+             * hashing des mdp
              */
             //$this->securiseMotsDePasse();
         } catch(Exception $e) {
@@ -35,8 +34,7 @@ class PdoGsb
 
     /**
      * Getter permettant de récupérer la valeur cost pour l'algorithme de chiffrement BCRYPT
-     * Ainsi on a qu'à modifier la variable $cost dans cette classe pour renforcer ou affaiblir le nombre
-     * de passes de l'algorithme
+     * Ainsi on a qu'à modifier la variable $cost dans cette classe
      * @return int
      */
     public function getCost() {
@@ -197,22 +195,6 @@ class PdoGsb
     }
 
     /**
-     * Retourne tous les véhicules avec leur indemnité kilométrique
-     *
-     * @return un tableau associatif
-     */
-    public function getLesVehicules()
-    {
-        $requetePrepare = PdoGsb::$monPdo->prepare(
-            'SELECT vehicule.id as id, vehicule.nom as nom, vehicule.indemnitekm as indemnitekm '
-            . 'FROM vehicule ORDER BY vehicule.id'
-        );
-
-        $requetePrepare->execute();
-        return $requetePrepare->fetchAll();
-    }
-
-    /**
      * Met à jour la table ligneFraisForfait
      * Met à jour la table ligneFraisForfait pour un membre et
      * un mois donné en enregistrant les nouveaux montants
@@ -244,31 +226,7 @@ class PdoGsb
         }
     }
 
-    /**
-     * Met à jour la table fichefrais en lui ajoutant l'id du véhicule sélectionné dans la table vehicule
-     *
-     * @param $idMembre
-     * @param $mois
-     * @param $idVehicule
-     *
-     *
-     * @return null
-     */
-    public function majVehicule($idMembre, $mois, $idVehicule)
-    {
-        $requetePrepare = PdoGsb::$monPdo->prepare(
-            'UPDATE fichefrais '
-            . 'SET fichefrais.idvehicule = :unIdVehicule '
-            . 'WHERE fichefrais.idmembre = :unIdMembre '
-            . 'AND fichefrais.mois = :unMois'
-        );
-
-        $requetePrepare->bindParam(':unIdVehicule', $idVehicule, PDO::PARAM_INT);
-        $requetePrepare->bindParam(':unIdMembre', $idMembre, PDO::PARAM_STR);
-        $requetePrepare->bindParam(':unMois', $mois, PDO::PARAM_STR);
-        $requetePrepare->execute();
-    }
-
+    
     /**
      * Met à jour la table ligneFraisHorsForfait
      * Met à jour la table ligneFraisHorsForfait pour un membre et
@@ -557,15 +515,12 @@ class PdoGsb
             . 'fichefrais.nbjustificatifs as nbJustificatifs, '
             . 'fichefrais.montantvalide as montantValide, '
             . 'fichefrais.mois as mois, '
-            . 'fichefrais.idvehicule as idvehicule, '
             . 'etat.libelle as libEtat, '
             . 'membre.nom as nom, '
             . 'membre.prenom as prenom, '
-            . 'vehicule.indemnitekm as indemnitekm '
             . 'FROM fichefrais '
             . 'INNER JOIN etat ON fichefrais.idetat = etat.id '
             . 'INNER JOIN membre ON fichefrais.idmembre = membre.id '
-            . 'INNER JOIN vehicule ON fichefrais.idvehicule = vehicule.id '
             . 'WHERE fichefrais.idmembre = :unIdMembre '
             . 'AND fichefrais.mois = :unMois';
 
