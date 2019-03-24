@@ -13,7 +13,6 @@ $idVisiteur            = isset($_POST['lstVisiteurs']) ? filter_input(INPUT_POST
 $lesMoisDisponibles    = $pdo->getLesMoisDisponibles($idVisiteur, 'CL');
 $mois                  = substr($moisChoisi, 0, 4);
 $annee                 = substr($moisChoisi, 4, 2);
-$lesVehicules          = $pdo->getLesVehicules();
 $infosFicheFrais       = $pdo->getLesInfosFicheFrais($idVisiteur, $moisChoisi);
 
 $_SESSION['moisChoisi']       = $moisChoisi;
@@ -46,7 +45,6 @@ switch ($action) {
 
         if(lesQteFraisValides($lesFrais)) {
             $pdo->majFraisForfait($idVisiteur, $moisChoisi, $lesFrais);
-            $pdo->majVehicule($idVisiteur, $moisChoisi, $lesFrais['VEH']);
             $_SESSION['flash'] = 'Les "frais forfait" ont bien été mis à jour !';
 
             header('Location: index.php?uc=validerFrais&action=validerSaisieFraisVisiteur');
