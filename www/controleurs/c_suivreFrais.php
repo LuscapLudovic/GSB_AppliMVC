@@ -87,7 +87,7 @@ switch ($action) {
             ob_end_clean();
 
             ob_start();
-            include( __DIR__. '/../remboursement.php');
+            include( __DIR__. '/../pdf.php');
             $pdfContent = ob_get_clean();
 
             
