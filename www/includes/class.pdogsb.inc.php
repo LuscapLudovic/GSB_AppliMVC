@@ -1,42 +1,4 @@
 <?php
-/**
- * Classe d'accès aux données.
- *
- * PHP Version 7
- *
- * @category  PPE
- * @package   GSB
- * @author    Cheri Bibi - Réseau CERTA <contact@reseaucerta.org>
- * @author    José GIL - CNED <jgil@ac-nice.fr>
- * @author    Alexy ROUSSEAU <contact@alexy-rousseau.com>
- * @copyright 2017-2019 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <13>
- * @link      http://www.php.net/manual/fr/book.pdo.php PHP Data Objects sur php.net
- */
-
-/**
- * Classe d'accès aux données.
- *
- * Utilise les services de la classe PDO
- * pour l'application GSB
- * Les attributs sont tous statiques,
- * les 4 premiers pour la connexion
- * $monPdo de type PDO
- * $monPdoGsb qui contiendra l'unique instance de la classe
- *
- * PHP Version 7
- *
- * @category  PPE
- * @package   GSB
- * @author    Cheri Bibi - Réseau CERTA <contact@reseaucerta.org>
- * @author    José GIL <jgil@ac-nice.fr>
- * @author    Alexy ROUSSEAU <contact@alexy-rousseau.com>
- * @copyright 2017-2019 Réseau CERTA
- * @license   Réseau CERTA
- * @version   GIT: <13>
- * @link      http://www.php.net/manual/fr/book.pdo.php PHP Data Objects sur php.net
- */
 
 class PdoGsb
 {
