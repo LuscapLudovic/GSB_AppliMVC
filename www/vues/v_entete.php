@@ -36,8 +36,8 @@
                 <div class="row vertical-align">
                     <div class="col-md-4">
                         <h1>
-                            <img src="./images/logo.jpg" class="img-responsive" 
-                                 alt="Laboratoire Galaxy-Swiss Bourdin" 
+                            <img src="./images/logo.png" class="img-responsive"
+                                 alt="Laboratoire Galaxy-Swiss Bourdin"
                                  title="Laboratoire Galaxy-Swiss Bourdin">
                         </h1>
                     </div>
@@ -49,6 +49,8 @@
                                     Accueil
                                 </a>
                             </li>
+
+                            <?php if($_SESSION['rang'] == 'visiteur') { ?>
                             <li <?php if ($uc == 'gererFrais') { ?>class="active"<?php } ?>>
                                 <a href="index.php?uc=gererFrais&action=saisirFrais">
                                     <span class="glyphicon glyphicon-pencil"></span>
@@ -61,7 +63,22 @@
                                     Afficher mes fiches de frais
                                 </a>
                             </li>
-                            <li 
+
+                            <?php } elseif($_SESSION['rang'] == 'comptable') { ?>
+                            <li <?php if ($uc == 'validerFrais') { ?>class="active"<?php } ?>>
+                                <a href="index.php?uc=validerFrais&action=voirFraisVisiteur">
+                                    <span class="glyphicon glyphicon-ok"></span>
+                                    Valider les fiches de frais
+                                </a>
+                            </li>
+                            <li <?php if ($uc == 'suivreFrais') { ?>class="active"<?php } ?>>
+                                <a href="index.php?uc=suivreFrais&action=selectionnerMois">
+                                    <span class="glyphicon glyphicon-euro"></span>
+                                    Suivre les paiements des fiches de frais
+                                </a>
+                            </li>
+                            <?php } ?>
+                            <li
                             <?php if ($uc == 'deconnexion') { ?>class="active"<?php } ?>>
                                 <a href="index.php?uc=deconnexion&action=demandeDeconnexion">
                                     <span class="glyphicon glyphicon-log-out"></span>
@@ -72,14 +89,25 @@
                     </div>
                 </div>
             </div>
-            <?php
-            } else {
-                ?>   
-                <h1>
-                    <img src="./images/logo.jpg"
-                         class="img-responsive center-block"
-                         alt="Laboratoire Galaxy-Swiss Bourdin"
-                         title="Laboratoire Galaxy-Swiss Bourdin">
-                </h1>
+            <div class="content">
                 <?php
-            }
+                    if(isset($_SESSION['flash'])) {
+                        ?>
+                        <div class="alert alert-info" role="alert">
+                            <p><?php echo $_SESSION['flash']?></p>
+                        </div>
+                        <?php
+                    }
+                    unset($_SESSION['flash']);
+                ?>
+                <?php
+                } else {
+                    ?>
+                    <h1>
+                        <img src="./images/logo.png"
+                             class="img-responsive center-block"
+                             alt="Laboratoire Galaxy-Swiss Bourdin"
+                             title="Laboratoire Galaxy-Swiss Bourdin">
+                    </h1>
+                    <?php
+                }
