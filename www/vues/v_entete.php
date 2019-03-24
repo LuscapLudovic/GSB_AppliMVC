@@ -22,7 +22,7 @@
                 <div class="row vertical-align">
                     <div class="col-md-4">
                         <h1>
-                            <img src="./images/logo.png" class="img-responsive"
+                            <img src="./images/logo.jpg" class="img-responsive"
                                  alt="Laboratoire Galaxy-Swiss Bourdin"
                                  title="Laboratoire Galaxy-Swiss Bourdin">
                         </h1>
