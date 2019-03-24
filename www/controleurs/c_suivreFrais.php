@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ .'/../../vendor/autoload.php';
+
 if(empty($_SESSION['ficheChoisie'])) {
     $_SESSION['ficheChoisie'] = '';
 }
@@ -83,7 +85,7 @@ switch ($action) {
 
         
         if(!file_exists($filePath)) {
-          
+
             ob_end_clean();
 
             ob_start();

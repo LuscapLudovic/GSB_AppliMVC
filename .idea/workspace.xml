@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="64469693-4664-4287-bbde-5a2496b4b19d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/vues/v_entete.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/vues/v_entete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/controleurs/c_suivreFrais.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/controleurs/c_suivreFrais.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,25 +18,34 @@
         <entry file="file://$PROJECT_DIR$/www/controleurs/c_connexion.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="561">
-              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="c_suivreFrais.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="c_suivreFrais.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/controleurs/c_suivreFrais.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+            <state relative-caret-position="54">
+              <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="v_suivreFrais.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/vues/comptable/v_suivreFrais.php">
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
+            <state relative-caret-position="68">
+              <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="class.pdogsb.inc.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/includes/class.pdogsb.inc.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="676" column="9" selection-start-line="676" selection-start-column="9" selection-end-line="676" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -75,8 +84,9 @@
         <option value="$PROJECT_DIR$/www/controleurs/c_connexion.php" />
         <option value="$PROJECT_DIR$/www/controleurs/c_gererFrais.php" />
         <option value="$PROJECT_DIR$/www/vues/v_entete.php" />
-        <option value="$PROJECT_DIR$/www/controleurs/c_suivreFrais.php" />
         <option value="$PROJECT_DIR$/www/vues/comptable/v_suivreFrais.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/www/controleurs/c_suivreFrais.php" />
       </list>
     </option>
   </component>
@@ -110,31 +120,28 @@
             <path>
               <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controleurs" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mpdf" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mpdf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mpdf" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="includes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GSB_AppliMVC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GSB_AppliMVC" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="www" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vues" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mpdf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mpdf" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -144,7 +151,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lamborghini_gallardo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GSB_PHP-master" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
   </component>
   <component name="RunDashboard">
@@ -186,7 +193,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45000000" />
+    <option name="totallyTimeSpent" value="48248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -197,7 +204,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3298292" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
@@ -221,6 +228,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
@@ -232,39 +240,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vues/v_listeFraisForfait.php" />
-    <entry file="file://$PROJECT_DIR$/vues/v_enteteGestion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="50" column="90" selection-start-line="50" selection-start-column="90" selection-end-line="50" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vues/v_entete.php" />
     <entry file="file://$PROJECT_DIR$/includes/fct.inc.php" />
     <entry file="file://$PROJECT_DIR$/vues/v_etatFrais.php" />
-    <entry file="file://$PROJECT_DIR$/vues/v_validationFrais.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleurs/c_valideFrais.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/vues/v_validationFrais.php" />
+    <entry file="file://$PROJECT_DIR$/controleurs/c_valideFrais.php" />
     <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="94" column="53" selection-start-line="94" selection-start-column="53" selection-end-line="94" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/class.pdogsb.inc.php" />
     <entry file="file://$PROJECT_DIR$/controleurs/c_etatFrais.php" />
     <entry file="file://$PROJECT_DIR$/vues/v_listeMois.php" />
     <entry file="file://$PROJECT_DIR$/controleurs/c_accueil.php" />
@@ -336,12 +318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/controleurs/c_accueil.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/includes/fct.inc.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/vues/v_entete.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -349,27 +325,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/includes/class.pdogsb.inc.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/controleurs/c_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mpdf/mpdf/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-160" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_psr4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="74" lean-forward="true" selection-start-line="10" selection-start-column="74" selection-end-line="10" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_files.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/vues/comptable/v_suivreFrais.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1077">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/controleurs/c_suivreFrais.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/vues/comptable/v_suivreFrais.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
+        <state relative-caret-position="54">
+          <caret line="83" column="43" selection-start-line="83" selection-start-column="43" selection-end-line="83" selection-end-column="43" />
         </state>
       </provider>
     </entry>
