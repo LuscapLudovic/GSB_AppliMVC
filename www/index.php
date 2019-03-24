@@ -1,5 +1,5 @@
 <?php
-ob_start(); // Utile si on veut nettoyer le contenu de l'output, notamment pour la génération de PDF
+ob_start(); 
 
 require_once 'includes/fct.inc.php';
 require_once 'includes/class.pdogsb.inc.php';
