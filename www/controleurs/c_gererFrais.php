@@ -5,7 +5,6 @@ $mois = getMois(date('d/m/Y'));
 $numAnnee = substr($mois, 0, 4);
 $numMois = substr($mois, 4, 2);
 $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING);
-$lesVehicules = $pdo->getlesVehicules();
 $infosFicheFrais = $pdo->getlesInfosFicheFrais($idMembre, $mois);
 
 switch ($action) {
@@ -18,7 +17,6 @@ switch ($action) {
         $lesFrais = filter_input(INPUT_POST, 'lesFrais', FILTER_DEFAULT, FILTER_FORCE_ARRAY);
         if (lesQteFraisValides($lesFrais)) {
             $pdo->majFraisForfait($idMembre, $mois, $lesFrais);
-            $pdo->majVehicule($idMembre, $mois, $lesFrais['VEH']);
             header('Location: index.php?uc=gererFrais&action=saisirFrais');
         } else {
             ajouterErreur('Les valeurs des frais doivent être numériques');
