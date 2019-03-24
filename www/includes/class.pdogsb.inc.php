@@ -517,7 +517,7 @@ class PdoGsb
             . 'fichefrais.mois as mois, '
             . 'etat.libelle as libEtat, '
             . 'membre.nom as nom, '
-            . 'membre.prenom as prenom, '
+            . 'membre.prenom as prenom '
             . 'FROM fichefrais '
             . 'INNER JOIN etat ON fichefrais.idetat = etat.id '
             . 'INNER JOIN membre ON fichefrais.idmembre = membre.id '

@@ -90,7 +90,7 @@
                 } else {
                     ?>
                     <h1>
-                        <img src="./images/logo.png"
+                        <img src="./images/logo.jpg"
                              class="img-responsive center-block"
                              alt="Laboratoire Galaxy-Swiss Bourdin"
                              title="Laboratoire Galaxy-Swiss Bourdin">
