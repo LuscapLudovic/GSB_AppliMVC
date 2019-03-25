@@ -80,7 +80,7 @@ switch ($action) {
         break;
 
     case 'export':
-        $storagePath = __DIR__. '/../pdf/';
+        $storagePath = __DIR__. '/';
         $filePath    = $storagePath . $idVisiteur. '_'. $idMois. '.pdf';
 
         
