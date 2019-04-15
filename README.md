@@ -73,3 +73,9 @@ L'application est directement consultable ici :
 ## Versioning
 
 GitHub a été utilisé pour maintenir un versionning du projet.
+
+## Auteurs
+* Base du CNED
+* Luscap Ludovic https://github.com/LuscapLudovic
+* Sahin Ulku Umay https://github.com/uumays
+* Barusseau Kylian https://github.com/Omedan
