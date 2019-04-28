@@ -1,7 +1,9 @@
-# Application web GSB
+﻿# Application web GSB
 
 Cette application web est destinée au laboratoire Galaxy Swiss Bourdin. Elle permet à ses visiteurs médicaux de saisir leurs notes de frais et aux comptable de l'entreprise de les gérer pour les leur rembourser.
 
+## L'application web en ligne
+Ce projet est en ligne est peut être consulté à l'adresse : https://gsb.omedan.me/index.php
 ## Guide de démarrage
 Ces instructions vous permettront de récupérer ce projet et de le lancer sur une machine locale de développement à des fins de tests.
 
